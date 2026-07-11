@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you - DemShade Pro</title>
+<style>
+  :root {
+    --accent: #4db8ff;
+    --accent-hover: #2ea6ff;
+    --bg: #0a0e14;
+    --card: #12161f;
+    --card-border: #232838;
+    --text: #eaf1fb;
+    --text2: #8b96a8;
+    --success: #00e676;
+    --warning: #ffb84d;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: radial-gradient(circle at 50% -10%, #16202f 0%, var(--bg) 55%);
+    color: var(--text);
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+    min-height: 100vh;
+  }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+  }
+  .logo-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+  .logo-dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 18px 4px rgba(77,184,255,0.55);
+  }
+  .logo-text {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--text2);
+    text-transform: uppercase;
+  }
+  .check {
+    width: 76px; height: 76px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,230,118,0.18) 0%, rgba(0,230,118,0.04) 70%);
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid rgba(0,230,118,0.35);
+  }
+  .check svg { width: 34px; height: 34px; }
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    margin: 0 0 10px;
+    font-weight: 700;
+  }
+  .sub {
+    text-align: center;
+    color: var(--text2);
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 40px;
+  }
+  .card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 26px 28px;
+    margin-bottom: 20px;
+  }
+  .card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text2);
+    margin: 0 0 14px;
+    font-weight: 700;
+  }
+  .card p {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--text);
+    margin: 0 0 10px;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  .steps {
+    counter-reset: step;
+    margin: 0; padding: 0; list-style: none;
+  }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 38px;
+    margin-bottom: 16px;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--text);
+  }
+  .steps li:last-child { margin-bottom: 0; }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: rgba(77,184,255,0.15);
+    border: 1px solid rgba(77,184,255,0.4);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .steps b { color: var(--accent); }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(180deg, var(--accent), var(--accent-hover));
+    color: #06141f;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 22px rgba(77,184,255,0.28);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(77,184,255,0.4); }
+  .btn:active { transform: translateY(0); }
+  .note {
+    text-align: center;
+    color: var(--text2);
+    font-size: 12.5px;
+    margin-top: 14px;
+    line-height: 1.5;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--warning);
+    background: rgba(255,184,77,0.12);
+    border: 1px solid rgba(255,184,77,0.35);
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  a { color: var(--accent); }
+  .footer {
+    text-align: center;
+    color: var(--text2);
+    font-size: 12.5px;
+    margin-top: 48px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo-row">
+      <div class="logo-dot"></div>
+      <div class="logo-text">DemShade</div>
+    </div>
+
+    <div class="check">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 12.5L9.5 18L20 6" stroke="#00e676" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <h1>Payment received!</h1>
+    <p class="sub">Thank you for purchasing DemShade Pro. Your license key is issued by hand for<br>
+      each order and bound to your PC, so it usually takes a little while to arrive.</p>
+
+    <div class="card">
+      <span class="badge">WHAT HAPPENS NEXT</span>
+      <ol class="steps">
+        <li>We already have the <b>Hardware ID</b> you entered at checkout, tied to your order.</li>
+        <li>Your personal Pro key is generated from it and emailed to the address you paid with, usually within a few hours.</li>
+        <li>Open DemShade &rarr; <b>Settings &rarr; License</b>, paste the key, and press <b>Activate</b>.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Didn't get your key yet?</h2>
+      <p>No worries — download the confirmation below and keep it for your records. If the key hasn't
+         arrived within 24 hours, reply to it and get in touch through
+         <a href="https://demshade.com" target="_blank" rel="noopener">demshade.com</a>.</p>
+    </div>
+
+    <button class="btn" id="downloadBtn">
+      &#8681;&nbsp; Download order confirmation (.txt)
+    </button>
+    <p class="note">This file has your order summary and setup instructions — not the license key itself.<br>
+      The key is generated per-order and sent to you by email once it's ready.</p>
+
+    <div class="footer">DemShade &copy; <span id="year"></span> &mdash; demshade.com</div>
+  </div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+document.getElementById('downloadBtn').addEventListener('click', function () {
+  var params = new URLSearchParams(window.location.search);
+  var sessionId = params.get('session_id') || '(not available)';
+  var now = new Date().toISOString();
+
+  var content =
+"DEMSHADE PRO - ORDER CONFIRMATION\n" +
+"=================================\n\n" +
+"Date: " + now + "\n" +
+"Checkout session: " + sessionId + "\n\n" +
+"WHAT HAPPENS NEXT\n" +
+"-----------------\n" +
+"1. Your license key is generated by hand from the Hardware ID you\n" +
+"   entered at checkout, and is bound to that one PC.\n" +
+"2. It will be emailed to the address you used to pay, usually within\n" +
+"   a few hours.\n" +
+"3. Once you have it: open DemShade -> Settings -> License, paste the\n" +
+"   key into the field, and press Activate.\n\n" +
+"NEED HELP?\n" +
+"----------\n" +
+"If your key hasn't arrived within 24 hours, get in touch via\n" +
+"https://demshade.com and mention this order date and session ID above.\n\n" +
+"Thank you for supporting DemShade!\n";
+
+  var blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = "demshade-order-confirmation.txt";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+</script>
+</body>
+</html>
